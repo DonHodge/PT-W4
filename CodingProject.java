@@ -1,8 +1,5 @@
 package week4;
 
-/**
- * 
- */
 public class CodingProject {
 
 	public static void main(String[] args) {
@@ -35,9 +32,11 @@ public class CodingProject {
 				"Sally", "Buck", "Bob"};
 		
 		// iterate through names, calculate average number of letters
-		int numInName = 0;
-		int avgNameLength = 0;
+		int numInName = 0;	// equivalent to a sum total
+		int avgNameLength = 0;	// will be used to hold the average
+		// this for loop will add the sum of each name to the variable numInNames
 		for (int i = 0; i < names.length -1 ; i++) numInName += names[i].length();
+		// we calculate average by dividing sum by the total number
 		avgNameLength = numInName / names.length;
 		System.out.println("Average length of names:" + avgNameLength);
 		
@@ -56,13 +55,18 @@ public class CodingProject {
 		
 		// for loop populate array w/length of each name
 		for (int i = 0; i < names.length -1; i++) nameLengths[i] = names[i].length();
+		// the enhanced for loop will print the nameLengths next to one another
+		// on the same line
 		for (int name : nameLengths) System.out.print(name + " ");
-		
-// Question 6.)
+
+		// final sysout() to seperate the next print question
 		System.out.println();
 		
+// Question 6.)
+		
 		// calculate sum of elements in nameLengths array
-		int nameSum = 0;
+		int nameSum = 0;	// variable to hold the sum
+		// for loop to add the total namelengths together
 		for (int i = 0; i <nameLengths.length -1; i++) nameSum += nameLengths[i];
 		System.out.println("Sum of name characters: " + nameSum);
 		
